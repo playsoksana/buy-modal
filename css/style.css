@@ -7,7 +7,13 @@
   position: absolute;
   top: 0;
   left: 0;
-  background-color: tomato;
+  width: 100%;
+  background-image: url("../images/fruct.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  filter: grayscale(100%);
+
   width: 100vw;
   height: 100vh;
   padding: 20px 50px;
@@ -64,4 +70,25 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+.form-lable__input:focus,
+.form-lable__textarea:focus {
+  border-color: $accent-color;
+  outline: $accent-color;
+}
+
+.form-input:focus-within ~ .form-lable__text,
+.form-input:not(:placeholder-shown) ~ .form-lable__text {
+  color: red;
+}
+
+/* .form-modal:hover ~ .form-backdrop,
+.form-modal:focus ~ .form-backdrop {
+  filter: grayscale(0%);
+} */
+
+.form-backdrop:focus,
+.form-backdrop:hover {
+  filter: grayscale(0%);
 }
